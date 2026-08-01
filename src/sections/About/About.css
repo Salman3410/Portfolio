@@ -1,0 +1,372 @@
+/* ===========================
+   ABOUT SECTION
+=========================== */
+
+.about{
+    position: relative;
+    padding: 180px 8%;
+    background: #05070F;
+    overflow: hidden;
+}
+
+.about::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at top,
+        rgba(110,231,249,.08),
+        rgba(59,130,246,.05),
+        transparent 65%
+    );
+
+    pointer-events:none;
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.about-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+    align-items:center;
+    margin-bottom:120px;
+    position:relative;
+    z-index:2;
+}
+
+/* ===========================
+   IMAGE
+=========================== */
+
+.about-image{
+    position:relative;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.about-image img{
+    width:420px;
+    max-width:100%;
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 35px 70px rgba(0,0,0,.45);
+
+    object-fit:cover;
+}
+
+.about-glow{
+    position:absolute;
+
+    width:340px;
+    height:340px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(110,231,249,.22),
+        rgba(34,211,238,.16),
+        rgba(59,130,246,.10),
+        transparent 70%
+    );
+
+    filter:blur(70px);
+
+    z-index:-1;
+}
+
+/* ===========================
+   EXPERIENCE BADGE
+=========================== */
+
+.experience-badge{
+    position:absolute;
+
+    bottom:35px;
+    right:-15px;
+
+    background:rgba(10,14,25,.95);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(110,231,249,.18);
+
+    padding:20px 28px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.35);
+}
+
+.experience-badge span{
+    display:block;
+
+    font-size:2rem;
+
+    color:#6EE7F9;
+
+    font-weight:700;
+}
+
+.experience-badge p{
+    margin-top:6px;
+
+    color:#A7B0C0;
+
+    font-size:14px;
+}
+.about-content-wrapper{
+    position: relative;
+    z-index: 5;
+}
+.light-sweep{
+    position: absolute;
+    top: 0;
+    left: -35vw;
+
+    width: 30vw;
+    height: 100%;
+
+    z-index: 30;
+    pointer-events: none;
+
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(110,231,249,.05) 20%,
+        rgba(34,211,238,.22) 40%,
+        rgba(255,255,255,.95) 50%,
+        rgba(34,211,238,.22) 60%,
+        rgba(110,231,249,.05) 80%,
+        transparent 100%
+    );
+
+    filter: blur(8px);
+    opacity: 0;
+}
+.light-sweep::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(110,231,249,.18),
+        rgba(34,211,238,.45),
+        rgba(255,255,255,.95),
+        rgba(34,211,238,.45),
+        rgba(110,231,249,.18),
+        transparent
+    );
+
+    filter: blur(18px);
+}
+.light-sweep::after{
+    content:"";
+
+    position:absolute;
+
+    left:-120px;
+    right:-120px;
+    top:0;
+    bottom:0;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(59,130,246,.12),
+        rgba(34,211,238,.22),
+        rgba(110,231,249,.18),
+        transparent
+    );
+
+    filter: blur(60px);
+}
+/* ===========================
+   CONTENT
+=========================== */
+
+.about-content span{
+    color:#6EE7F9;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+}
+
+.about-content h2{
+    margin-top:20px;
+
+    font-size:clamp(3rem,5vw,4.8rem);
+
+    line-height:1.1;
+
+    color:white;
+}
+
+.about-content p{
+    margin-top:25px;
+
+    color:#94A3B8;
+
+    line-height:1.9;
+
+    font-size:17px;
+}
+
+.about-btn{
+    margin-top:45px;
+
+    padding:18px 36px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #3B82F6,
+        #22D3EE
+    );
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.about-btn:hover{
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 20px 40px rgba(34,211,238,.25);
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.stats{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.stat-card{
+    padding:38px;
+
+    border-radius:26px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+    backdrop-filter:blur(18px);
+
+    transition:.35s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+
+    border-color:#22D3EE;
+
+    box-shadow:
+    0 20px 45px rgba(34,211,238,.15);
+}
+
+.stat-card h3{
+    font-size:3rem;
+
+    color:white;
+
+    font-weight:700;
+}
+
+.stat-card p{
+    margin-top:15px;
+
+    color:#94A3B8;
+
+    font-size:15px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+.about-container{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+}
+
+.about-image{
+
+    order:-1;
+}
+
+.stats{
+
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:700px){
+
+.about{
+
+    padding:120px 24px;
+}
+
+.stats{
+
+    grid-template-columns:1fr;
+}
+
+.about-content h2{
+
+    font-size:2.5rem;
+}
+
+.about-image img{
+
+    width:320px;
+}
+
+}
