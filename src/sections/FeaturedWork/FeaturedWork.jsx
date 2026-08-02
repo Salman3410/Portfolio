@@ -9,10 +9,12 @@ import stagger from "../../animations/stagger";
 
 
 import "./FeaturedWork.css";
+import { useNavigate } from "react-router-dom";
 
 export default function FeaturedWork() {
   const featured = projects.find((p) => p.featured);
   const others = projects.filter((p) => !p.featured);
+  const navigate = useNavigate();
 
   return (
     <motion.section
@@ -40,7 +42,11 @@ export default function FeaturedWork() {
         ))}
       </motion.div>
 
-      <motion.button className="view-all" variants={fadeUp}>
+      <motion.button
+        className="view-all"
+        variants={fadeUp}
+        onClick={() => navigate("/projects")}
+      >
         View All Projects
         <FiArrowRight />
       </motion.button>

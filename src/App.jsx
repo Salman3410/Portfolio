@@ -1,30 +1,15 @@
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./sections/Hero/Hero";
-import FeaturedWork from "./sections/FeaturedWork/FeaturedWork";
-import Services from "./sections/Services/Services";
-import Skills from "./sections/Skills/Skills";
-import About from "./sections/About/About";
-import Contact from "./sections/Contact/Contact";
-import Footer from "./sections/Footer/Footer";
+import { Routes, Route } from "react-router-dom";
 
-import useGlobalReveal from "./animations/useGlobalReveal";
-import useNavbarAnimation from "./animations/useNavbarAnimation";
+import HomePage from "./pages/HomePage";
+import ProjectsGallery from "./pages/ProjectsGallery/ProjectsGallery";
+import ProjectDetails from "./pages/ProjectsGallery/ProjectDetails/ProjectDetails";
 
-function App() {
-  useGlobalReveal();
-  useNavbarAnimation();
+export default function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <FeaturedWork />
-      <Services />
-      <Skills />
-      <About />
-      <Contact />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/projects" element={<ProjectsGallery />} />
+      <Route path="/projects/:id" element={<ProjectDetails />} />
+    </Routes>
   );
 }
-
-export default App;
