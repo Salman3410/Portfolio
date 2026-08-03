@@ -15,7 +15,7 @@ import random8 from "../../../assets/projects/Random/Su-572.png"
 import random9 from "../../../assets/projects/Random/SwansGreen.png"
 import random10 from "../../../assets/projects/Random/SwansPeach.png"
 import random11 from "../../../assets/projects/Random/Typography1.png"
-import random12 from "../../../assets/projects/Random/Willdesign.png"
+
 
 import wallpaper1 from "../../../assets/projects/Wallpaper/block_wallpaper.png"
 import wallpaper2 from "../../../assets/projects/Wallpaper/error_wallpaper.png"
@@ -115,7 +115,7 @@ const projects = [
     cover: random1,
 
     gallery: [random1, random2, random3, random4, random5, random6, random7, random8, 
-      random9, random10, random11, random12, ],
+      random9, random10, random11 ],
 
     description: "A cinematic movie poster inspired by streaming platforms.",
 
