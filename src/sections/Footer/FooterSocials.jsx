@@ -11,17 +11,17 @@ const socials = [
   {
     id: 1,
     icon: FaGithub,
-    link: "https://github.com/yourusername",
+    link: "https://github.com/Salman3410",
   },
   {
     id: 2,
     icon: FaLinkedinIn,
-    link: "https://linkedin.com/in/yourusername",
+    link: "https://linkedin.com/in/m-salman-saeed",
   },
   {
     id: 3,
     icon: FaInstagram,
-    link: "https://instagram.com/yourusername",
+    link: "https://instagram.com/_.34.ssp",
   },
 ];
 

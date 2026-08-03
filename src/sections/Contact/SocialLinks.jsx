@@ -5,19 +5,18 @@ const socials = [
   {
     id: 1,
     icon: FaGithub,
-    url: "https://github.com/",
+    url: "https://github.com/Salman3410",
   },
   {
     id: 2,
     icon: FaLinkedinIn,
-    url: "https://linkedin.com/",
+    url: "https://linkedin.com/in/m-salman-saeed",
   },
   {
     id: 3,
     icon: FaInstagram,
-    url: "https://instagram.com/",
+    url: "https://instagram.com/_.34.ssp",
   },
-  
 ];
 
 export default function SocialLinks() {

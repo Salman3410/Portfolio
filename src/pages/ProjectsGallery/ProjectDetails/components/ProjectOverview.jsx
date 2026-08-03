@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import "./ProjectOverview.css";
 
-export default function ProjectOverview() {
+export default function ProjectOverview({ project }) {
   return (
     <section className="project-overview">
       <motion.div
@@ -24,10 +24,7 @@ export default function ProjectOverview() {
         >
           <h3>Objective</h3>
 
-          <p>
-            Design a cinematic movie poster capable of capturing attention while
-            maintaining a professional streaming platform aesthetic.
-          </p>
+          <p>{project.overview.objective}</p>
         </motion.div>
 
         <motion.div
@@ -38,10 +35,7 @@ export default function ProjectOverview() {
         >
           <h3>Challenge</h3>
 
-          <p>
-            Creating visual hierarchy between the title, character, background
-            effects and typography without making the poster feel cluttered.
-          </p>
+          <p>{project.overview.challenge}</p>
         </motion.div>
 
         <motion.div
@@ -52,10 +46,7 @@ export default function ProjectOverview() {
         >
           <h3>Solution</h3>
 
-          <p>
-            I combined dramatic lighting, cinematic grading, depth effects and
-            bold typography to achieve a balanced composition.
-          </p>
+          <p>{project.overview.solution}</p>
         </motion.div>
 
         <motion.div
@@ -66,10 +57,7 @@ export default function ProjectOverview() {
         >
           <h3>Result</h3>
 
-          <p>
-            Produced a modern promotional poster suitable for social media
-            campaigns and digital advertising.
-          </p>
+          <p>{project.overview.result}</p>
         </motion.div>
       </div>
     </section>

@@ -12,21 +12,19 @@ export default function ProjectCard({ project }) {
       transition={{ duration: 0.3 }}
       onClick={() => navigate(`/projects/${project.id}`)}
     >
-      <div className="project-image">
-        <img src={project.image} alt={project.title} />
+      <img src={project.cover} alt={project.title} className="project-image" />
 
-        <div className="project-overlay">
-          <span>{project.category}</span>
+      <div className="project-overlay">
+        <span>{project.category}</span>
 
-          <h3>{project.title}</h3>
+        <h3>{project.title}</h3>
 
-          <p>{project.description}</p>
+        <p>{project.description}</p>
 
-          <button>
-            View Project
-            <FiArrowUpRight />
-          </button>
-        </div>
+        <button>
+          View Project
+          <FiArrowUpRight />
+        </button>
       </div>
     </motion.article>
   );

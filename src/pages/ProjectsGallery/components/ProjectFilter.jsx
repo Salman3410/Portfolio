@@ -9,12 +9,12 @@ const filters = [
 
 export default function ProjectFilter({ category, setCategory }) {
   return (
-    <div className="project-filter">
+    <div className="filter-group">
       {filters.map((item) => (
         <button
           key={item}
           onClick={() => setCategory(item)}
-          className={category === item ? "active-filter" : ""}
+          className={`filter-btn ${category === item ? "active" : ""}`}
         >
           {item}
         </button>

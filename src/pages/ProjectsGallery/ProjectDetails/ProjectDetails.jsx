@@ -1,3 +1,6 @@
+import { useParams } from "react-router-dom";
+import projects from "../data/projectsData";
+
 import "./ProjectDetails.css";
 
 import BackButton from "./components/BackButton";
@@ -5,27 +8,32 @@ import ProjectHero from "./components/ProjectHero";
 import ProjectInfo from "./components/ProjectInfo";
 import ProjectOverview from "./components/ProjectOverview";
 import ProjectGallery from "./components/ProjectGallery";
-// import ProjectTools from "./components/ProjectTools";
 import ProjectProcess from "./components/ProjectProcess";
-import ProjectNavigation from "./components/ProjectNavigation";
 import CTASection from "./components/CTASection";
+import ProjectNavigation from "./components/ProjectNavigation";
 
 export default function ProjectDetails() {
+  const { id } = useParams();
+
+  const project = projects.find((p) => p.id === Number(id));
+console.log(project);
+  if (!project) {
+    return <h1>Project Not Found</h1>;
+  }
+
   return (
     <main className="project-details-page">
       <BackButton />
 
-      <ProjectHero />
+      <ProjectHero project={project} />
 
-      <ProjectInfo />
+      <ProjectInfo project={project} />
 
-      <ProjectOverview />
+      <ProjectOverview project={project} />
 
-      <ProjectGallery />
+      <ProjectGallery project={project} />
 
-      {/* <ProjectTools /> */}
-
-      <ProjectProcess />
+      <ProjectProcess project={project} />
 
       <CTASection />
 

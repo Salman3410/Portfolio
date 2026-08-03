@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import "../ProjectDetails.css";
 
-export default function ProjectHero() {
+export default function ProjectHero({ project }) {
   return (
     <section className="project-hero">
       <motion.img
-        src="/projects/movie1.jpg"
+        src={project.cover}
         alt="Project"
         className="project-cover"
         initial={{ opacity: 0, scale: 1.08 }}
@@ -15,7 +15,7 @@ export default function ProjectHero() {
         }}
       />
 
-      <div className="project-overlay" />
+      <div className="project-hero-overlay" />
 
       <motion.div
         className="project-hero-content"
@@ -32,14 +32,11 @@ export default function ProjectHero() {
           duration: 0.8,
         }}
       >
-        <span className="project-category">Movie Poster</span>
+        <span className="project-category">{project.category}</span>
 
-        <h1>Netflix Movie Poster</h1>
+        <h1>{project.title}</h1>
 
-        <p>
-          A cinematic promotional poster inspired by Netflix originals using
-          Photoshop.
-        </p>
+        <p>{project.description}</p>
       </motion.div>
     </section>
   );

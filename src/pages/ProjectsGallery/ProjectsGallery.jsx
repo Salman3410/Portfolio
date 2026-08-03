@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react";
-
 import "./ProjectsGallery.css";
 
 import ProjectHero from "./components/ProjectHero";
@@ -26,16 +25,18 @@ export default function ProjectsGallery() {
   }, [search, category]);
 
   return (
-    <main className="projects-gallery">
-      <ProjectHero />
+    <main className="projects-page">
+      <div className="gallery-container">
+        <ProjectHero />
 
-      <div className="gallery-toolbar">
-        <ProjectSearch search={search} setSearch={setSearch} />
+        <div className="gallery-toolbar">
+          <ProjectSearch search={search} setSearch={setSearch} />
 
-        <ProjectFilter category={category} setCategory={setCategory} />
+          <ProjectFilter category={category} setCategory={setCategory} />
+        </div>
+
+        <ProjectGrid projects={filteredProjects} />
       </div>
-
-      <ProjectGrid projects={filteredProjects} />
     </main>
   );
 }

@@ -2,7 +2,7 @@ import { FiSearch } from "react-icons/fi";
 
 export default function ProjectSearch({ search, setSearch }) {
   return (
-    <div className="project-search">
+    <div className="search-box">
       <FiSearch />
 
       <input
